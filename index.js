@@ -20,7 +20,7 @@ app.get('/:handle', async (req, res) => {
             globalRank: parseInt(document.querySelector('.rating-ranks').children[0].children[0].children[0].children[0].innerHTML),
             countryRank: parseInt(document.querySelector('.rating-ranks').children[0].children[1].children[0].children[0].innerHTML),
             stars: document.querySelector('.rating').textContent || "unrated",
-            countof: document.querySelector('.highcharts-root').children[9].children[2].children[0].textContent || "unrated",
+            countof: parseInt(document.querySelector('.highcharts-root').children[9].children[2].children[0].innerHTML) || "unrated",
 
         });
     } catch (err) {
